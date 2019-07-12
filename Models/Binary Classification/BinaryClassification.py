@@ -1,6 +1,3 @@
-"""
-"""
-
 from __future__ import absolute_import, division, print_function, unicode_literals
 import tensorflow as tf
 import numpy as np
@@ -31,7 +28,8 @@ y_test = np.asarray(test_labels).astype('float32')
 
 # 3 - The construction of our model
 model = tf.keras.models.Sequential([
-    tf.keras.layers.Dense(32, activation='relu', input_shape=(10000, )),
+    tf.keras.layers.Dense(16, activation='relu', input_shape=(10000, )),
+    tf.keras.layers.Dense(16, activation='relu'),
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 
